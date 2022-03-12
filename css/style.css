@@ -41,6 +41,7 @@
   box-sizing: border-box; }
 
 html {
+  scroll-behavior: smooth;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -62,6 +63,7 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -71,6 +73,317 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
+
+/* Yizhen - This is for hiding sidebar and navbar content */
+
+@media (max-width: 998px) {
+  #sidebar-content {
+    margin-left: -250px; 
+  } 
+}
+
+@media (max-width: 1150px) {
+  #navbar {
+    display:none; 
+  } 
+}
+
+/* yanyizhen - Below is for mobile navbar content */
+
+@media (min-width: 998px) {
+  .topnav {
+    display:none; 
+  } 
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  top:-50px;  
+  width:100%;
+  margin:auto;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: darkgray;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #272330;
+  color: white;
+}
+/* Yizhen - above is for mobile navbar content */
+
+
+.thin-border {
+  border: 1px solid #969ea5 !important;  
+  border-radius: .25rem !important;
+  width:40% !important;
+  min-width: 300px;
+}
+
+.focusedInput:focus{
+  border-color: rgba(14, 100, 165, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  -moz-box-shadow: 0 0 12px rgba(8, 76, 128, 0.6);
+  box-shadow: 0 0 12px rgba(6, 72, 122, 0.6) !important;
+}
+
+/*Yizhen - This is for adding floating element*/
+.moving-div {
+  position: absolute;
+  border: solid thin lightgrey;
+  background-color: white;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  display: none;
+  max-width: 400px;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.moving-div-active{
+  display: block;
+}
+
+
+
+/*Yizhen - This is for smooth scrolling thru navbar element*/
+
+.smooth {
+  scroll-behavior: smooth;
+}
+
+.fixed-1 {
+  position:fixed;
+  min-width: 250px;
+  max-width: 250px;
+}
+.fixed-1.push{
+  position:relative;
+  min-width: 250px;
+  max-width: 250px;
+}
+.fixed-2 {
+  position: fixed; 
+  top: 6rem;
+}
+.fixed-3 {
+  position: fixed; 
+  top: 22rem;
+}
+.fixed-4 {
+  position: fixed; 
+  top: 26rem;
+  font-size: 0.8rem;
+}
+
+canvas {
+    margin:auto; 
+    padding-top: 100px;
+    
+    z-index:0;
+  }
+  @media (min-width: 991px) {
+    canvas{
+      padding-right: 220px;
+    }
+  }
+
+/* below elements are for knowldeg page only.*/
+
+
+#navbar2 ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+   overflow-x: hidden;
+}
+
+#navbar2 {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  right: 10px;
+  width: 300px;
+  height: 100%;
+  border-left: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar2 li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar2 a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar2 header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc {
+  position: relative;
+  margin-right: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+  z-index:-1;
+
+}
+
+@media only screen and (max-width: 815px) {
+  /* Below For mobile phones: */
+  #navbar2 ul {
+    height: 207px;
+  }
+
+  #navbar2 {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    z-index: 1;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-right: 0px;
+    margin-top: 270px;
+  }
+}
+  /* Above For mobile phones: */
+
+/* above elements are for knowldeg page only.*/
+
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 100px;
+  right: 0px;
+  width: 300px;
+  height: 100%;
+  border-color: rgba(15, 66, 66, 0.4);}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;}
+    
+#navbar li {
+  color: #4d4e53;
+  list-style: none;
+  position: relative;
+  width: 100%; }
+    
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;  }
+
+/* yanyizhen */
+.responsive{
+  font-size: calc((.1em + .7vmin) + (.1em + .7vmax));
+}
+
+#intro-message {
+  /* width: 100%;
+  height: 50px; */
+  text-align: center;
+  font-size: calc((.1em + .5vmin) + (.1em + .5vmax));
+}
+
+
+#table-of-content {
+  padding: 10px;
+  width: 100%;
+  margin-right: auto;
+}
+#tb-col-1{
+  width: 50%px;
+}
+
+#table-of-content a:link {
+  text-decoration: none;
+}
+#table-of-content a:hover {
+  text-decoration: underline !important;
+}
+
+#table-of-content tr {
+  padding-left: 50px;
+  list-style-type: none;
+  border-bottom: thin groove rgba(211,211,211,0.5);
+  font-size: larger;
+}
+
+#index-tb-col{
+  text-align: center;
+  padding-left: 30px;
+}
+
+#table-of-content span {
+  font-size: medium !important;
+}
+
+#table-of-content th {
+  font-size: x-large;
+  color: #002752;
+}
+
+.explanation{
+  display:block;
+  min-width: 1062px;
+  text-align: center;
+  padding-right: 220px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: -130px;
+  z-index: 1;
+  padding-left: 230px;
+  }
+
 
 p {
   margin-top: 0;
@@ -2071,6 +2384,13 @@ fieldset:disabled a.btn {
   pointer-events: none; }
 
 .btn-primary {
+
+  /**yanyizhen**/
+  margin-top: 50px;
+  position: fixed;
+  margin-left: -40px;
+  /**yanyizhen**/
+
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
@@ -8206,6 +8526,10 @@ h1, h2, h3, h4, h5,
 .wrapper {
   width: 100%; }
 
+#hideable{
+  position: fixed; 
+}
+
 #sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -8244,7 +8568,9 @@ h1, h2, h3, h4, h5,
     #sidebar ul li.active > a {
       background: transparent;
       color: #fff; }
-  @media (max-width: 991.98px) {
+
+/* yanyizhen : adjust sidebar hidden width*/
+  @media (max-width: 998px) {
     #sidebar {
       margin-left: -250px; }
       #sidebar.active {
@@ -8342,9 +8668,12 @@ a[data-toggle="collapse"] {
 
     /* Style the tab */
 .tab {
+  position: fixed;
+  width: 100%;
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  z-index: 2;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -8371,7 +8700,38 @@ a[data-toggle="collapse"] {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  padding: 100px 12px;
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.icons{
+  padding-top: 100px;
+}
+.email_icon{
+  content: '';
+  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDYpFlYKLBj5QE48fb5vHV84GGhU67-X29Jw&usqp=CAU');
+  background-size:cover;
+      position:absolute;
+  width:60px;
+  height:50px;
+  margin-left:0px;
+}
+
+.xiaohongshu_icon{
+  content: '';
+  background:url('data:image/png;base64,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');
+  background-size:cover;
+      position:absolute;
+  width:50px;
+  height:50px;
+  margin-left:100px;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 70vh;
+  width: 70vw;
+}
+

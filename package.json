@@ -5,12 +5,25 @@
         "npm": "7.4"
     },
     "scripts": {
-        "start": "http-server"
+        "start": "nodemon index.js",
+        "build": "cp -r css js public/ && node build.js",
+        "build-win": "xcopy css public /E/H && xcopy js public /E/H && node build.js",
+        "updatedb": "node etl.js"
     },
     "dependencies": {
+        "body-parser": "^1.19.0",
         "canvas": "^2.6.1",
         "chart.js": "^2.9.4",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "html-to-react": "^1.4.5",
         "http-server": "*",
-        "node-pre-gyp": "^0.17.0"
+        "js-yaml": "^4.1.0",
+        "moment": "^2.29.1",
+        "mongoose": "^5.11.18",
+        "node-pre-gyp": "^0.17.0",
+        "nodemon": "^2.0.7",
+        "pinyin": "^2.10.2",
+        "serverless-http": "^2.7.0"
     }
 }
